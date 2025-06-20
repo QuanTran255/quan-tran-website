@@ -22,7 +22,9 @@
   --background-color: #ffffff; /* Background color for the entire website, including individual sections */
   --default-color: #4e4e4e; /* Default color used for the majority of the text content across the entire website */
   --heading-color: #0a090f; /* Color for headings, subheadings and title throughout the website */
-  --accent-color: #0078ff; /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  --accent-color: #ff8800; 
+  /* Accent color that represents your brand on the website. It's used for buttons, links, and other elements that need to stand out */
+  /* --accent-color: #0078ff; */
   --surface-color: #ffffff; /* The surface color is used as a background of boxed elements within sections, such as cards, icon boxes, or other elements that require a visual separation from the global background. */
   --contrast-color: #ffffff; /* Contrast color for text, ensuring readability against backgrounds of accent, heading, or default colors. */
 }
@@ -53,11 +55,11 @@
 }
 
 .accent-background {
-  --background-color: #0078ff;
+  --background-color: #ffb62f;
   --default-color: #ffffff;
   --heading-color: #ffffff;
   --accent-color: #ffffff;
-  --surface-color: #3393ff;
+  --surface-color: #ffcb63;
   --contrast-color: #ffffff;
 }
 
@@ -1072,6 +1074,10 @@ section,
 .portfolio-wrap {
   position: relative;
   overflow: hidden;
+  aspect-ratio: 4 / 3; /* Or your desired ratio */
+  width: 100%;
+  height: 100%;
+  border-radius: 6px;
 }
 
 .portfolio-info {
@@ -1108,43 +1114,74 @@ section,
 
 .project-overlay {
   position: absolute;
-  top: 10px;
-  left: 10px;
+  
+  top: 0px;
+  /* left: 10px; */
   background: rgba(0, 0, 0, 0.85);
   padding: 10px 16px;
   border-radius: 6px;
   color: #fff;
-  max-height: 40px;
-  width: auto;
+  height: 40px;
+  width: 100%;
   overflow: auto;
   z-index: 2;
-  transition: max-height 0.4s ease, padding 0.4s ease;
+  transition: width 0.4s ease, height 0.4s ease, padding 0.4s ease;
   display: flex;
   flex-direction: column;
 }
 
+/* .project-overlay .text-visible {
+  max-height: 0;
+  padding: 0;
+  overflow: hidden;
+  transition: width 0.4s ease, max-height 0.4s ease, padding 0.4s ease;
+  width: 100%;
+  visibility: hidden;
+} */
+
 .project-overlay h4 {
-  color: #3284ff;
-  font-size: 18px; /* adjusts between 14px and 20px */
+  /* color: #3284ff; */
+
+  text-align: center;
+  color: var(--accent-color);
+  font-size: clamp(16px, 2vw, 20px); /* dynamically responsive */
+  /* text-align: center; */
+  /* even margin all around */
   margin: 0;
+  padding-bottom: 10px;
   font-weight: 600;
 }
 
 .project-overlay .project-details {
-  font-size: clamp(12px, 1.5vw, 16px); /* dynamically responsive */
+  font-size: 14px;
+  overflow-y: auto;
+  flex-grow: 1;
+}
+
+
+.portfolio-wrap img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
 }
 
 
 /* Hover effect to expand the box */
-.portfolio-wrap:hover .project-overlay {
-  max-height: 500px; /* Enough to show all content */
-  padding: 16px 20px;
+.portfolio-wrap:hover .project-overlay{
+  height: 100%; /* Enough to show all content */
+  /* padding: 16px 20px; */
+  transition: width 0.4s ease, height 0.4s ease, padding 0.4s ease;
+  text-align: left;
+  width: 100%;
+  /* visibility: visible; */
 }
 
-.portfolio-wrap:hover .project-overlay .project-details {
+/* .portfolio-wrap:hover .project-overlay .project-details {
   opacity: 1;
   transform: translateY(0);
-}
+} */
+
 
 
 /*--------------------------------------------------------------

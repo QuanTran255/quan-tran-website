@@ -513,6 +513,7 @@
             <div class="col-md-12">
               <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
             </div>
+            <input type="hidden" name="_redirect" value="/thanks.html">
 
             <div class="col-md-12 text-center">
               <div class="loading">Loading</div>
@@ -526,35 +527,7 @@
         </form>
 
 
-        <!-- <form action="forms/contact.php" method="post" class="php-email-form" data-aos="fade-up" data-aos-delay="300">
-          <div class="row gy-4">
-
-            <div class="col-md-6">
-              <input type="text" name="name" class="form-control" placeholder="Your Name" required="">
-            </div>
-
-            <div class="col-md-6 ">
-              <input type="email" class="form-control" name="email" placeholder="Your Email" required="">
-            </div>
-
-            <div class="col-md-12">
-              <input type="text" class="form-control" name="subject" placeholder="Subject" required="">
-            </div>
-
-            <div class="col-md-12">
-              <textarea class="form-control" name="message" rows="6" placeholder="Message" required=""></textarea>
-            </div>
-
-            <div class="col-md-12 text-center">
-              <div class="loading">Loading</div>
-              <div class="error-message"></div>
-              <div class="sent-message">Your message has been sent. Thank you!</div>
-
-              <button type="submit">Send Message</button>
-            </div>
-
-          </div> -->
-        <!-- </form> -->
+      
         <!-- End Contact Form -->
 
       </div>
@@ -591,9 +564,46 @@
   <!-- Preloader -->
   <div id="preloader"></div>
 
+  <script>
+    const form = document.querySelector('.php-email-form');
+    const sentMessage = document.querySelector('.sent-message');
+    const errorMessage = document.querySelector('.error-message');
+    const loading = document.querySelector('.loading');
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+      
+      // Show loading
+      loading.classList.add('d-block');
+      sentMessage.classList.remove('d-block');
+      errorMessage.classList.remove('d-block');
+
+      fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { 'Accept': 'application/json' }
+      }).then(response => {
+        loading.classList.remove('d-block');
+        if (response.ok) {
+          sentMessage.classList.add('d-block');
+          form.reset();
+        } else {
+          response.json().then(data => {
+            errorMessage.textContent = data.error || "There was a problem submitting the form.";
+            errorMessage.classList.add('d-block');
+          });
+        }
+      }).catch(error => {
+        loading.classList.remove('d-block');
+        errorMessage.textContent = "There was a problem submitting the form.";
+        errorMessage.classList.add('d-block');
+      });
+    });
+  </script>
+
+
   <!-- Vendor JS Files -->
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/aos/aos.js"></script>
   <script src="assets/vendor/typed.js/typed.umd.js"></script>
   <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>

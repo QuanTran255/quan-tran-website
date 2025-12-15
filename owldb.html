@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>OwlDB - Custom NoSQL Database - Quan Tran</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+</head>
+
+<body class="portfolio-details-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">Quan Tran</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html#hero">Home<br></a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#resume">Resume</a></li>
+          <li><a href="index.html#projects">Projects</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0" style="color: #ff8800; font-size: 2.5rem;">OwlDB - Custom NoSQL Database</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li class="current">OwlDB</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Portfolio Details Section -->
+    <section id="portfolio-details" class="portfolio-details section">
+
+      <div class="container-fluid" data-aos="fade-up">
+
+        <div class="row g-0">
+
+          <div class="col-lg-7" data-aos="fade-up" style="padding: 20px 40px 40px 40px;">
+            <div class="portfolio-description">
+              <h2>Project Overview</h2>
+              <p>
+                Developed OwlDB, a high-performance custom NoSQL database system built from scratch in Go, featuring a complete 
+                RESTful API interface and advanced concurrency support. The project demonstrates deep understanding of database 
+                fundamentals, distributed systems concepts, and production-grade software engineering practices.
+              </p>
+
+              <h3 class="mt-4">Key Achievements</h3>
+              
+              <h4 class="mt-3">Extensible NoSQL Architecture</h4>
+              <p>
+                Designed and implemented an extensible NoSQL database architecture capable of supporting <strong>100 concurrent connections</strong> 
+                with consistent performance. The architecture employs efficient data structures and indexing mechanisms optimized for 
+                fast read and write operations, while maintaining data integrity and ACID properties where appropriate.
+              </p>
+
+              <h4 class="mt-3">RESTful API Architecture</h4>
+              <p>
+                Designed and implemented a <strong>hierarchical RESTful API</strong> supporting recursive nested structures (Database → Document → 
+                Collection → Document) with full CRUD operations at each level. The API follows RESTful principles with proper HTTP methods, 
+                status codes, and JSON formatting. Features include <strong>Server-Sent Events (SSE) for real-time subscriptions</strong>, authentication, 
+                CORS support, and comprehensive error handling with detailed logging.
+              </p>
+
+              <h4 class="mt-3">High-Concurrency Request Handling</h4>
+              <p>
+                Leveraged Go's powerful concurrency features including goroutines and channels to handle <strong>high-volume requests efficiently</strong>. 
+                The implementation uses connection pooling, worker pools, and mutex-based synchronization to manage concurrent access 
+                to shared resources while preventing race conditions and deadlocks. Performance testing demonstrated linear scalability 
+                up to 100 concurrent connections with minimal latency degradation.
+              </p>
+
+              <h4 class="mt-3">Comprehensive Testing Strategy</h4>
+              <p>
+                Achieved <strong>92% code coverage</strong> through extensive unit and integration testing, significantly improving system reliability 
+                and maintainability. The test suite includes unit tests for individual components, integration tests for API endpoints, 
+                concurrency tests for race condition detection, and stress tests for performance validation under load.
+              </p>
+
+              <h3 class="mt-4">Technical Implementation</h3>
+              
+              <h4 class="mt-3">Database Core</h4>
+              <ul>
+                <li><strong>Data Storage:</strong> Custom key-value store with B-tree indexing for efficient lookups</li>
+                <li><strong>Persistence:</strong> Write-ahead logging (WAL) for durability and crash recovery</li>
+                <li><strong>Memory Management:</strong> Efficient memory allocation with garbage collection optimization</li>
+                <li><strong>Query Engine:</strong> Support for basic filtering, sorting, and aggregation operations</li>
+              </ul>
+
+              <h4 class="mt-3">API Layer</h4>
+              <p>
+                The API follows a hierarchical structure supporting recursive nesting: <code>/v1/{database}/{document}/{collection}/{document}/...</code>
+              </p>
+              
+              <h5>Base Routes</h5>
+              <ul>
+                <li><strong>POST /auth:</strong> Authentication endpoint for API access</li>
+                <li><strong>/v1/:</strong> Main API base route for all database operations</li>
+              </ul>
+
+              <h5>Database Level - /v1/{database}</h5>
+              <ul>
+                <li><strong>PUT /v1/{database}:</strong> Create a new database</li>
+                <li><strong>DELETE /v1/{database}:</strong> Delete a database</li>
+                <li><strong>OPTIONS /v1/{database}:</strong> Get allowed methods</li>
+              </ul>
+
+              <h5>Document Level - /v1/{database}/{document}</h5>
+              <ul>
+                <li><strong>GET /v1/{database}/{document}:</strong> Retrieve a document</li>
+                <li><strong>GET /v1/{database}/{document}?mode=subscribe:</strong> Subscribe to document updates (SSE)</li>
+                <li><strong>PUT /v1/{database}/{document}:</strong> Create or update a document</li>
+                <li><strong>PATCH /v1/{database}/{document}:</strong> Partially update a document</li>
+                <li><strong>DELETE /v1/{database}/{document}:</strong> Delete a document</li>
+                <li><strong>OPTIONS /v1/{database}/{document}:</strong> Get allowed methods</li>
+              </ul>
+
+              <h5>Collection Level - /v1/{database}/{document}/{collection}/</h5>
+              <ul>
+                <li><strong>GET /v1/{database}/{document}/{collection}/:</strong> Get collection documents</li>
+                <li><strong>GET .../collection/?mode=subscribe&interval=[low,high]:</strong> Subscribe with interval filter (SSE)</li>
+                <li><strong>PUT /v1/{database}/{document}/{collection}/:</strong> Create a new collection</li>
+                <li><strong>POST /v1/{database}/{document}/{collection}/:</strong> Create document with auto-generated name</li>
+                <li><strong>DELETE /v1/{database}/{document}/{collection}/:</strong> Delete a collection</li>
+                <li><strong>OPTIONS /v1/{database}/{document}/{collection}/:</strong> Get allowed methods</li>
+              </ul>
+
+              <h5>Special Features</h5>
+              <ul>
+                <li><strong>SSE Subscriptions:</strong> Real-time updates using Server-Sent Events with <code>?mode=subscribe</code></li>
+                <li><strong>Interval Filters:</strong> Collection subscriptions support <code>?interval=[low,high]</code> for range queries</li>
+                <li><strong>Authentication:</strong> All /v1/ endpoints require authentication (except OPTIONS)</li>
+                <li><strong>CORS Support:</strong> All endpoints support cross-origin requests with <code>Access-Control-Allow-Origin: *</code></li>
+                <li><strong>Recursive Nesting:</strong> Documents in collections can contain nested collections indefinitely</li>
+              </ul>
+
+              <h4 class="mt-3">Concurrency Architecture</h4>
+              <ul>
+                <li><strong>Connection Pool:</strong> Managed pool of database connections with automatic scaling</li>
+                <li><strong>Worker Pools:</strong> Dedicated worker goroutines for handling concurrent requests</li>
+                <li><strong>Read-Write Locks:</strong> Fine-grained locking strategy to maximize concurrent reads</li>
+                <li><strong>Request Queuing:</strong> Priority-based request queue for load balancing</li>
+                <li><strong>Graceful Shutdown:</strong> Clean connection termination and resource cleanup</li>
+              </ul>
+
+              <h3 class="mt-4">Testing & Quality Assurance</h3>
+              <p>
+                The comprehensive testing strategy ensures high reliability and maintainability:
+              </p>
+              <ul>
+                <li><strong>Unit Tests:</strong> 200+ test cases covering individual functions and components</li>
+                <li><strong>Integration Tests:</strong> End-to-end API testing with realistic workloads</li>
+                <li><strong>Concurrency Tests:</strong> Race condition detection with Go's race detector</li>
+                <li><strong>Load Tests:</strong> Performance validation under 100+ concurrent connections</li>
+                <li><strong>Benchmark Tests:</strong> Operation latency and throughput measurements</li>
+                <li><strong>Error Recovery:</strong> Crash simulation and recovery validation</li>
+              </ul>
+
+              <h3 class="mt-4">Performance Characteristics</h3>
+              <ul>
+                <li><strong>Write Throughput:</strong> 10,000+ writes per second</li>
+                <li><strong>Read Throughput:</strong> 50,000+ reads per second</li>
+                <li><strong>Average Latency:</strong> &lt;5ms for simple queries</li>
+                <li><strong>Concurrent Connections:</strong> 100 connections with stable performance</li>
+                <li><strong>Memory Efficiency:</strong> ~50MB baseline memory footprint</li>
+              </ul>
+
+              <h3 class="mt-4">Engineering Best Practices</h3>
+              <p>
+                The project demonstrates professional software engineering practices:
+              </p>
+              <ul>
+                <li>Clean code architecture with separation of concerns</li>
+                <li>Comprehensive documentation and code comments</li>
+                <li>Error handling and logging throughout the codebase</li>
+                <li>Configuration management with environment variables</li>
+                <li>Version control with meaningful commit messages</li>
+                <li>Code reviews and collaborative development workflow</li>
+              </ul>
+
+              <h3 class="mt-4">Learning Outcomes</h3>
+              <p>
+                This project provided deep insights into:
+              </p>
+              <ul>
+                <li>Database internals and storage engine design</li>
+                <li>Concurrent programming patterns and synchronization primitives</li>
+                <li>RESTful API design and implementation</li>
+                <li>Performance optimization and profiling techniques</li>
+                <li>Software testing methodologies and quality assurance</li>
+                <li>Production-grade system design and deployment considerations</li>
+              </ul>
+
+            </div>
+          </div>
+
+          <div class="col-lg-5 position-relative" data-aos="fade-up" data-aos-delay="100" style="background-color: #f8f9fa; padding: 20px 40px 40px 20px;">
+            <div style="position: sticky; top: 60px; width: 100%;">
+              <img src="assets/img/portfolio/database.png" class="img-fluid rounded" alt="OwlDB Database" style="width: 100%; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+              
+              <div class="portfolio-info mt-4" style="background: white; padding: 20px; border-radius: 8px;">
+                <h3>Project Information</h3>
+                <ul>
+                  <li><strong>Project Name</strong>: OwlDB</li>
+                  <li><strong>Type</strong>: Custom NoSQL Database</li>
+                  <li><strong>Duration</strong>: August 2024 - October 2024</li>
+                  <li><strong>Category</strong>: Backend Systems / Databases</li>
+                </ul>
+              </div>
+
+              <div class="portfolio-info mt-4" style="background: white; padding: 20px; border-radius: 8px;">
+                <h3>Technologies Used</h3>
+                <ul>
+                  <li>Go (Golang)</li>
+                  <li>RESTful APIs</li>
+                  <li>Server-Sent Events (SSE)</li>
+                  <li>NoSQL Architecture</li>
+                  <li>Concurrent Programming</li>
+                  <li>Authentication</li>
+                  <li>CORS</li>
+                  <li>JSON</li>
+                  <li>Unit Testing</li>
+                  <li>Integration Testing</li>
+                </ul>
+              </div>
+
+              <div class="portfolio-info mt-4" style="background: white; padding: 20px; border-radius: 8px;">
+                <h3>Key Metrics</h3>
+                <ul>
+                  <li><strong>Concurrent Connections</strong>: 100</li>
+                  <li><strong>API Endpoints</strong>: 15+</li>
+                  <li><strong>Code Coverage</strong>: 92%</li>
+                  <li><strong>Write Throughput</strong>: 10,000+ ops/sec</li>
+                  <li><strong>Read Throughput</strong>: 50,000+ ops/sec</li>
+                </ul>
+              </div>
+
+              <div class="portfolio-info mt-4" style="background: white; padding: 20px; border-radius: 8px;">
+                <h3>Key Features</h3>
+                <ul>
+                  <li>Custom NoSQL storage engine</li>
+                  <li>Hierarchical RESTful API</li>
+                  <li>Real-time SSE subscriptions</li>
+                  <li>Recursive nested structures</li>
+                  <li>Authentication & CORS</li>
+                  <li>High-concurrency support</li>
+                  <li>B-tree indexing</li>
+                  <li>Write-ahead logging</li>
+                </ul>
+              </div>
+
+              <div class="portfolio-info mt-4" style="background: white; padding: 20px; border-radius: 8px;">
+                <h3>Source Code</h3>
+                <a href="https://github.com/RICE-COMP318-FALL24/owldb-p1group07" target="_blank" class="btn btn-outline-dark">View on GitHub</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Details Section -->
+
+  </main>
+
+  <footer id="footer" class="footer accent-background">
+
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">DevFolio</strong> <span>All Rights Reserved</span></p>
+      </div>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://github.com/QuanTran255" target="_blank"><i class="bi bi-github"></i></a>
+        <a href="https://www.linkedin.com/in/quan-tran-20017626b/" target="_blank"><i class="bi bi-linkedin"></i></a>
+      </div>
+      <div class="credits">
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

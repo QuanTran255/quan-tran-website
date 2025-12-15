@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>EV Charging Station Tracker - Quan Tran</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+</head>
+
+<body class="portfolio-details-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">Quan Tran</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html#hero">Home<br></a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#resume">Resume</a></li>
+          <li><a href="index.html#projects">Projects</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0" style="color: #ff8800; font-size: 2.5rem;">EV Charging Station Availability Tracker</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li class="current">EV Tracker</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Portfolio Details Section -->
+    <section id="portfolio-details" class="portfolio-details section">
+
+      <div class="container-fluid" data-aos="fade-up">
+
+        <div class="row g-0">
+
+          <div class="col-lg-7" data-aos="fade-up" style="padding: 20px 40px 40px 40px;">
+            <div class="portfolio-description">
+              <h2>Project Overview</h2>
+              <p>
+                Developed a memory-efficient live tracking system for electric vehicle charging station availability using 
+                the Count-Min Sketch probabilistic data structure. The project addresses range anxiety and charging infrastructure 
+                availability challenges by providing real-time route planning with optimal charging stops while using 88% less 
+                memory than traditional tracking methods with only 1.91% false positive rate.
+              </p>
+
+              <h3 class="mt-4">Motivation</h3>
+              <p>
+                The adoption of electric vehicles has been slowed by range anxiety and uncertainty about public charging 
+                infrastructure availability. As a Tesla owner, I have experienced these challenges firsthand and wondered 
+                whether improvements could be made to existing tracking tools. This project applies streaming algorithms 
+                and probabilistic data structures to create a scalable, memory-efficient solution that can track thousands 
+                of charging stations in real time.
+              </p>
+
+              <h3 class="mt-4">Key Achievements</h3>
+              
+              <h4 class="mt-3">Memory-Efficient Tracking with Count-Min Sketch</h4>
+              <p>
+                Implemented a Count-Min Sketch (CMS) based tracking system that achieves <strong>88% memory reduction</strong> 
+                compared to traditional dictionary-based approaches with only <strong>1.91% false positive rate</strong>. 
+                The CMS maintains a compact two-dimensional array of counters indexed by multiple hash functions, allowing us 
+                to track charging station occupancy across all timeslots without storing full per-station histories.
+              </p>
+
+              <h4 class="mt-3">Real-Time Route Planning</h4>
+              <p>
+                Developed an intelligent route planning system that integrates with the Google Maps API to find optimal 
+                charging stops along a route. The system considers current location, destination, desired charge at arrival, 
+                and current battery level to select the best charging stations. It uses Haversine distance calculations to 
+                identify the 5 closest candidates along the route and greedily picks the furthest available station that 
+                satisfies availability constraints.
+              </p>
+
+              <h4 class="mt-3">Statewide Coverage</h4>
+              <p>
+                Tracks <strong>841 Level 3 DC Fast Charging stations</strong> across the entire state of Texas. Each station 
+                is divided into 10-minute timeslots to match realistic charging session durations. The system simulates a 
+                live environment by initializing station occupancy with a normal distribution (mean 50% capacity, standard 
+                deviation 20%) and handling charging sessions of 10, 20, or 30 minutes.
+              </p>
+
+              <h3 class="mt-4">Technical Implementation</h3>
+              
+              <h4 class="mt-3">Count-Min Sketch Algorithm</h4>
+              <p>
+                The Count-Min Sketch is a probabilistic data structure for frequency estimation in data streams. Our 
+                implementation uses:
+              </p>
+              <ul>
+                <li><strong>Multiple Hash Functions:</strong> 8 independent hash functions to distribute updates across counters</li>
+                <li><strong>Width Parameter:</strong> 20,000 counters per row to minimize collision probability</li>
+                <li><strong>Minimum Estimation:</strong> Takes minimum of hashed counters to limit errors to false positives only</li>
+                <li><strong>Streaming Updates:</strong> Handles plug-in/unplug events in constant time O(k) where k is number of hash functions</li>
+              </ul>
+              <p>
+                Unlike traditional Count Sketch which takes the median, we use the minimum to ensure errors are only false 
+                positives (reporting a station as occupied when it's available) rather than false negatives (reporting as 
+                available when occupied), which would be more harmful to user experience.
+              </p>
+
+              <h4 class="mt-3">Route Planning Algorithm</h4>
+              <p>The system follows these steps to plan optimal routes with charging stops:</p>
+              <ol>
+                <li><strong>Input Collection:</strong> User provides current location, destination, current charge, and desired arrival charge</li>
+                <li><strong>Route Generation:</strong> Google Maps API generates optimal driving route</li>
+                <li><strong>Candidate Selection:</strong> Identifies 5 closest charging stations to the route using Haversine distance</li>
+                <li><strong>Availability Check:</strong> Queries CMS for each candidate's availability in upcoming timeslots</li>
+                <li><strong>Greedy Selection:</strong> Picks furthest available station along route (maximizes progress toward destination)</li>
+                <li><strong>Fallback Strategy:</strong> If all stations full, checks 10-minute wait increments up to 30 minutes</li>
+                <li><strong>Expansion:</strong> If no stations available within 30 minutes, expands search to next 5 closest stations</li>
+                <li><strong>Reservation:</strong> Inserts charging session into selected timeslot in CMS</li>
+              </ol>
+
+              <h4 class="mt-3">Simulation Environment</h4>
+              <p>
+                To test the system in a realistic scenario, we implemented a comprehensive simulation:
+              </p>
+              <ul>
+                <li><strong>Initial State:</strong> All 841 stations initialized with normal distribution (μ=50%, σ=20%)</li>
+                <li><strong>Charging Sessions:</strong> Randomly assigned 10, 20, or 30-minute durations</li>
+                <li><strong>Streaming Data:</strong> One continuous stream of events rather than batch processing</li>
+                <li><strong>Real-Time Updates:</strong> CMS updated as charging events occur throughout simulation</li>
+                <li><strong>Error Accumulation:</strong> Long stream captures any accuracy degradation as data structure fills</li>
+              </ul>
+
+              <h3 class="mt-4">Experimental Results</h3>
+              
+              <h4 class="mt-3">Performance Comparison</h4>
+              <p>
+                We compared our CMS implementation against a baseline dictionary approach that stores full state for every 
+                charging station and timeslot. The following configurations were tested:
+              </p>
+              <table class="table table-bordered mt-3">
+                <thead>
+                  <tr>
+                    <th>Configuration</th>
+                    <th>Hash Functions</th>
+                    <th>Width</th>
+                    <th>Memory Ratio</th>
+                    <th>FPR (%)</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Baseline (Dictionary)</td>
+                    <td>N/A</td>
+                    <td>N/A</td>
+                    <td>100%</td>
+                    <td>0%</td>
+                  </tr>
+                  <tr>
+                    <td>CMS Config 1</td>
+                    <td>4</td>
+                    <td>20,000</td>
+                    <td>5.93%</td>
+                    <td>7.84%</td>
+                  </tr>
+                  <tr>
+                    <td>CMS Config 2</td>
+                    <td>4</td>
+                    <td>30,000</td>
+                    <td>8.89%</td>
+                    <td>3.29%</td>
+                  </tr>
+                  <tr>
+                    <td>CMS Config 3</td>
+                    <td>8</td>
+                    <td>15,000</td>
+                    <td>8.89%</td>
+                    <td>5.08%</td>
+                  </tr>
+                  <tr style="background-color: #fff3cd;">
+                    <td><strong>CMS Optimal</strong></td>
+                    <td><strong>8</strong></td>
+                    <td><strong>20,000</strong></td>
+                    <td><strong>11.86%</strong></td>
+                    <td><strong>1.91%</strong></td>
+                  </tr>
+                  <tr>
+                    <td>CMS Config 5</td>
+                    <td>16</td>
+                    <td>10,000</td>
+                    <td>11.84%</td>
+                    <td>6.24%</td>
+                  </tr>
+                  <tr>
+                    <td>CMS Config 6</td>
+                    <td>16</td>
+                    <td>15,000</td>
+                    <td>17.76%</td>
+                    <td>0.99%</td>
+                  </tr>
+                </tbody>
+              </table>
+              <p>
+                The optimal configuration (8 hash functions, width 20,000) achieves our target of 75% memory reduction with 
+                less than 5% accuracy loss, using only 11.86% of baseline memory with 1.91% false positive rate. This represents 
+                an 88% memory savings while maintaining over 98% accuracy.
+              </p>
+
+              <h3 class="mt-4">Interactive Route Planning Application</h3>
+              <p>
+                Beyond the core CMS implementation, we developed a user-facing application with an interactive frontend. 
+                Users can input their trip details and receive real-time route suggestions with optimal charging stops. 
+                While the interface demonstrates the practical application of the algorithm, it has some limitations in 
+                less densely populated areas of West Texas where charging infrastructure is sparse.
+              </p>
+
+              <h3 class="mt-4">Comparison to Existing Approaches</h3>
+              <p>
+                Most existing EV charging solutions focus on predicting future usage patterns rather than managing live 
+                availability:
+              </p>
+              <ul>
+                <li><strong>Predictive Models:</strong> LSTM-based approaches predict occupancy at future time horizons</li>
+                <li><strong>Machine Learning:</strong> Data-driven frameworks forecast waiting times using historical data</li>
+                <li><strong>Our Approach:</strong> Maintains lightweight, real-time view of actual availability using streaming algorithms</li>
+                <li><strong>Advantage:</strong> Memory-efficient tracking of current state rather than probability estimates</li>
+              </ul>
+
+              <h3 class="mt-4">Learning Outcomes</h3>
+              <ul>
+                <li>Deep understanding of probabilistic data structures and their tradeoffs</li>
+                <li>Practical application of streaming algorithms to real-world infrastructure problems</li>
+                <li>Experience with spatial algorithms (Haversine distance, route optimization)</li>
+                <li>Integration with external APIs (Google Maps) for practical applications</li>
+                <li>Performance analysis and parameter tuning for algorithmic systems</li>
+                <li>Understanding when approximate solutions are preferable to exact ones</li>
+              </ul>
+
+            </div>
+          </div>
+
+          <div class="col-lg-5 position-relative" data-aos="fade-up" data-aos-delay="100" style="background-color: #f8f9fa; padding: 20px 40px 40px 20px;">
+            <div style="position: sticky; top: 60px; width: 100%;">
+              <img src="assets/img/portfolio/ev-charging.png" class="img-fluid rounded" alt="EV Charging Tracker" style="width: 100%; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+              
+              <div class="portfolio-info mt-4" style="background: white; padding: 20px; border-radius: 8px;">
+                <h3>Project Information</h3>
+                <ul>
+                  <li><strong>Project Name</strong>: EV Charging Station Tracker</li>
+                  <li><strong>Course</strong>: COMP 480 - Streaming Algorithms</li>
+                  <li><strong>Duration</strong>: Fall 2024</li>
+                  <li><strong>Category</strong>: Algorithms / Data Structures</li>
+                  <li><strong>Team</strong>: Camden Graham, Quan Tran</li>
+                </ul>
+              </div>
+
+              <div class="portfolio-info mt-4" style="background: white; padding: 20px; border-radius: 8px;">
+                <h3>Technologies Used</h3>
+                <ul>
+                  <li>Python</li>
+                  <li>Count-Min Sketch</li>
+                  <li>Probabilistic Data Structures</li>
+                  <li>Streaming Algorithms</li>
+                  <li>Google Maps API</li>
+                  <li>Haversine Distance</li>
+                  <li>Hash Functions</li>
+                </ul>
+              </div>
+
+              <div class="portfolio-info mt-4" style="background: white; padding: 20px; border-radius: 8px;">
+                <h3>Key Metrics</h3>
+                <ul>
+                  <li><strong>Memory Reduction</strong>: 88%</li>
+                  <li><strong>False Positive Rate</strong>: 1.91%</li>
+                  <li><strong>Stations Tracked</strong>: 841</li>
+                  <li><strong>Coverage Area</strong>: Statewide (Texas)</li>
+                  <li><strong>Hash Functions</strong>: 8</li>
+                  <li><strong>CMS Width</strong>: 20,000</li>
+                </ul>
+              </div>
+
+              <div class="portfolio-info mt-4" style="background: white; padding: 20px; border-radius: 8px;">
+                <h3>Key Features</h3>
+                <ul>
+                  <li>Count-Min Sketch for memory efficiency</li>
+                  <li>Real-time availability tracking</li>
+                  <li>Intelligent route planning</li>
+                  <li>Optimal charging stop selection</li>
+                  <li>10-minute timeslot granularity</li>
+                  <li>Fallback waiting time logic</li>
+                  <li>Interactive web interface</li>
+                </ul>
+              </div>
+
+              <div class="portfolio-info mt-4" style="background: white; padding: 20px; border-radius: 8px;">
+                <h3>Algorithm Details</h3>
+                <ul>
+                  <li><strong>Time Complexity:</strong> O(k) per update</li>
+                  <li><strong>Space Complexity:</strong> O(k × d)</li>
+                  <li><strong>False Negatives:</strong> 0% (by design)</li>
+                  <li><strong>False Positives:</strong> 1.91%</li>
+                  <li>k = number of hash functions (8)</li>
+                  <li>w = width of counter array (20,000)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Details Section -->
+
+  </main>
+
+  <footer id="footer" class="footer accent-background">
+
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">DevFolio</strong> <span>All Rights Reserved</span></p>
+      </div>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://github.com/QuanTran255" target="_blank"><i class="bi bi-github"></i></a>
+        <a href="https://www.linkedin.com/in/quan-tran-20017626b/" target="_blank"><i class="bi bi-linkedin"></i></a>
+      </div>
+      <div class="credits">
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

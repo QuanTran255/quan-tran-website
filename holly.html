@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>H.O.L.L.Y. - Interactive Productivity Device - Quan Tran</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+</head>
+
+<body class="portfolio-details-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">Quan Tran</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html#hero">Home<br></a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#resume">Resume</a></li>
+          <li><a href="index.html#projects">Projects</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0" style="color: #ff8800; font-size: 2.5rem;">H.O.L.L.Y. - Interactive Productivity Device</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li class="current">H.O.L.L.Y.</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Portfolio Details Section -->
+    <section id="portfolio-details" class="portfolio-details section">
+
+      <div class="container-fluid" data-aos="fade-up">
+
+        <div class="row g-0">
+
+          <div class="col-lg-7" data-aos="fade-up" style="padding: 20px 40px 40px 40px;">
+            <div class="portfolio-description">
+              <h2>Project Overview</h2>
+              <p>
+                H.O.L.L.Y. (Holographic, Obscure, Little Logical Yapper) is a productivity device that transforms 
+                any flat surface into an interactive touchscreen using computer vision and projection mapping. 
+                The system tracks hand gestures in real-time, allowing users to interact with a projected interface 
+                through simple point-and-click motions. Built with Python and open-source libraries on a Raspberry Pi, 
+                H.O.L.L.Y. demonstrates an accessible approach to hands-free computing.
+              </p>
+
+              <h3 class="mt-4">Key Achievements</h3>
+              
+              <h4 class="mt-3">Optimized Computer Vision Pipeline</h4>
+              <p>
+                Engineered a computer vision pipeline that achieves <strong>40% reduction in gesture detection 
+                latency</strong> compared to the initial implementation. The optimization focused on multi-threaded 
+                frame processing and efficient algorithms for the Raspberry Pi's ARM architecture. Implemented frame 
+                buffering to maintain smooth interactions during processing, compensating for the limited GPU support 
+                on Raspberry Pi hardware.
+              </p>
+
+              <h4 class="mt-3">Lens Correction Algorithms</h4>
+              <p>
+                Implemented lens correction algorithms that compensate for distortion in the camera and projector optics. 
+                Achieved <strong>12% improvement in tracking accuracy</strong> over baseline by calibrating the 
+                camera-projector system using checkerboard patterns and computing distortion coefficients. The correction 
+                ensures detected hand positions accurately map to projected interface elements.
+              </p>
+
+              <h4 class="mt-3">Voice Assistant Integration</h4>
+              <p>
+                Integrated language models via <strong>HuggingFace</strong> to create a voice-activated assistant. 
+                Combined speech recognition, natural language processing, and text-to-speech synthesis for basic 
+                voice interactions and system control.
+              </p>
+
+              <h3 class="mt-4">Technical Implementation</h3>
+              
+              <h4 class="mt-3">System Architecture</h4>
+              <ul>
+                <li><strong>Vision Module:</strong> OpenCV and MediaPipe Hands for hand detection and tracking</li>
+                <li><strong>Calibration:</strong> Camera-projector calibration for lens distortion correction</li>
+                <li><strong>UI Framework:</strong> Kivy-based projection interface</li>
+                <li><strong>Voice Assistant:</strong> Speech recognition and TTS pipeline</li>
+              </ul>
+
+              <h4 class="mt-3">Computer Vision Pipeline</h4>
+              
+              <h5>Hand Detection & Tracking</h5>
+              <ul>
+                <li><strong>MediaPipe Hands:</strong> 21 hand landmark detection</li>
+                <li><strong>Kalman Filtering:</strong> Smooth trajectory prediction to reduce jitter</li>
+              </ul>
+
+              <h5>Lens Correction</h5>
+              <ul>
+                <li><strong>Camera Calibration:</strong> Checkerboard-based calibration</li>
+                <li><strong>Distortion Correction:</strong> Brown-Conrady model for radial distortion</li>
+              </ul>
+
+              <h4 class="mt-3">Gesture Recognition</h4>
+              <ul>
+                <li><strong>Point:</strong> Tracks midpoint between thumb and index finger for cursor control</li>
+                <li><strong>Click:</strong> Pinching motion (distance threshold) for button activation</li>
+              </ul>
+
+              <h4 class="mt-3">Voice Assistant</h4>
+              <ul>
+                <li><strong>Google Speech API:</strong> Speech-to-text</li>
+                <li><strong>HuggingFace Transformers:</strong> Basic conversational responses</li>
+                <li><strong>pyttsx3:</strong> Text-to-speech synthesis</li>
+              </ul>
+
+              <h4 class="mt-3">User Interface</h4>
+              <ul>
+                <li><strong>Virtual Desktop:</strong> Launcher with application icons</li>
+                <li><strong>Calculator:</strong> Virtual calculator with gesture input</li>
+                <li><strong>Settings:</strong> System configuration interface</li>
+              </ul>
+
+              <h3 class="mt-4">Hardware Configuration</h3>
+              <ul>
+                <li><strong>Projector:</strong> Full-HD LED projector</li>
+                <li><strong>Camera:</strong> USB camera with wide-angle lens</li>
+                <li><strong>Microphone:</strong> USB microphone</li>
+                <li><strong>Speaker:</strong> Bluetooth speaker</li>
+                <li><strong>Processing Unit:</strong> Raspberry Pi</li>
+              </ul>
+
+              <h3 class="mt-4">Performance Metrics</h3>
+              <ul>
+                <li><strong>Latency Reduction</strong>: 40% improvement</li>
+                <li><strong>Tracking Accuracy</strong>: 12% improvement with lens correction</li>
+                <li><strong>Response Time</strong>: ~50ms end-to-end</li>
+              </ul>
+
+              <h3 class="mt-4">Learning Outcomes</h3>
+              <ul>
+                <li>Computer vision algorithms and real-time image processing</li>
+                <li>Camera calibration and geometric transformations</li>
+                <li>Performance optimization for embedded systems</li>
+                <li>Hardware-software integration</li>
+              </ul>
+
+            </div>
+          </div>
+
+          <div class="col-lg-5 position-relative" data-aos="fade-up" data-aos-delay="100" style="background-color: #f8f9fa; padding: 20px 40px 40px 20px;">
+            <div style="position: sticky; top: 60px; width: 100%;">
+              <img src="assets/img/portfolio/code.png" class="img-fluid rounded" alt="H.O.L.L.Y. Device" style="width: 100%; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+              
+              <div class="portfolio-info mt-4" style="background: white; padding: 20px; border-radius: 8px;">
+                <h3>Project Information</h3>
+                <ul>
+                  <li><strong>Project Name</strong>: H.O.L.L.Y.</li>
+                  <li><strong>Full Name</strong>: Hands-On Learning and Lifestyle Yielder</li>
+                  <li><strong>Duration</strong>: December 2023 - August 2024</li>
+                  <li><strong>Category</strong>: Computer Vision / HCI</li>
+                  <li><strong>Type</strong>: Personal Project</li>
+                </ul>
+              </div>
+
+              <div class="portfolio-info mt-4" style="background: white; padding: 20px; border-radius: 8px;">
+                <h3>Technologies Used</h3>
+                <ul>
+                  <li>Python</li>
+                  <li>OpenCV</li>
+                  <li>MediaPipe Hands</li>
+                  <li>Kivy Framework</li>
+                  <li>HuggingFace Transformers</li>
+                  <li>Google Speech API</li>
+                  <li>pyttsx3 (TTS)</li>
+                  <li>NumPy / SciPy</li>
+                  <li>scikit-learn</li>
+                </ul>
+              </div>
+
+              <div class="portfolio-info mt-4" style="background: white; padding: 20px; border-radius: 8px;">
+                <h3>Key Metrics</h3>
+                <ul>
+                  <li><strong>Latency Reduction</strong>: 40%</li>
+                  <li><strong>Tracking Accuracy</strong>: +12%</li>
+                  <li><strong>Response Time</strong>: ~50ms</li>
+                </ul>
+              </div>
+
+              <div class="portfolio-info mt-4" style="background: white; padding: 20px; border-radius: 8px;">
+                <h3>Key Features</h3>
+                <ul>
+                  <li>Real-time hand gesture tracking</li>
+                  <li>Lens distortion correction</li>
+                  <li>Voice-activated AI assistant</li>
+                  <li>Projection mapping interface</li>
+                  <li>Multi-threaded processing</li>
+                  <li>2 gesture types (point & click)</li>
+                  <li>Touch-free interaction</li>
+                </ul>
+              </div>
+
+              <div class="portfolio-info mt-4" style="background: white; padding: 20px; border-radius: 8px;">
+                <h3>Source Code</h3>
+                <a href="https://github.com/QuanTran255/Holly" target="_blank" class="btn btn-outline-dark">View on GitHub</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Details Section -->
+
+  </main>
+
+  <footer id="footer" class="footer accent-background">
+
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">DevFolio</strong> <span>All Rights Reserved</span></p>
+      </div>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://github.com/QuanTran255" target="_blank"><i class="bi bi-github"></i></a>
+        <a href="https://www.linkedin.com/in/quan-tran-20017626b/" target="_blank"><i class="bi bi-linkedin"></i></a>
+      </div>
+      <div class="credits">
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

@@ -159,7 +159,7 @@
               <h4>About me</h4>
               <p>
                 Hi, I'm Quan Tran, a Computer Science student at Rice University with a focus on backend systems, data infrastructure, and applied machine learning. 
-                Through internships at HP, VNG Cloud, and the Rice Computer Vision Lab, I've gained experience building robust software—from 
+                Through internships at HP, VNG Cloud, and the Rice Computer Vision Lab, I've gained experience building robust software from 
                   a Python-based automation framework integrated into Jenkins pipelines, 
                   to an online-learning anomaly detection system deployed on live cloud traffic, 
                   to full-stack tools for evaluating object-tracking vision models. 
@@ -202,7 +202,7 @@
                 <li>(281)-690-6463</li>
                 <li>qmt1@rice.edu</li>
               </ul>
-            </div><!-- Edn Resume Item -->
+            </div><!-- End Resume Item -->
           </div>
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
             <h3 class="resume-title">Education</h3>
@@ -211,7 +211,7 @@
               <h5>2022 - Present</h5>
               <p><em>Rice University, Houston, Texas</em></p>
               <p>GPA: 3.8/4.0</p>
-            </div><!-- Edn Resume Item -->
+            </div><!-- End Resume Item -->
 
           </div>
 
@@ -278,58 +278,103 @@
 
           <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
 
+            <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
+              <a href="crater-detection.html" class="portfolio-wrap position-relative overflow-hidden" style="text-decoration: none; color: inherit; display: block;">
+                <div class="image-crop-container">
+                  <img src="assets/img/portfolio/Sample_trajectory.gif" class="img-fluid" alt="Crater Detection project">
+                </div>
+
+                <div class="project-overlay">
+                  <h4>Crater Detection For Moon Navigation</h4>
+
+                  <div class="project-details">
+                    <p>Instance segmentation model for lunar crater detection supporting NASA moon navigation missions.</p>
+                    <ul class="text-start">
+                      <li>3 km navigation error (80% improvement from baseline)</li>
+                      <li>4-second inference within 20-second mission constraint</li>
+                      <li>Automated labeling for 100,000+ craters (saved 1,000 hours)</li>
+                    </ul>
+                    <p><strong>Tech:</strong> PyTorch, Deep Learning, Computer Vision, Instance Segmentation, Python</p>
+                    <span class="btn btn-sm btn-outline-light mt-2">Learn More</span>
+                  </div>
+                </div>
+              </a>
+            </div>
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="portfolio-wrap position-relative overflow-hidden">
+              <a href="tracker-visualizer.html" class="portfolio-wrap position-relative overflow-hidden" style="text-decoration: none; color: inherit; display: block;">
                 <div class="image-crop-container">
                   <img src="assets/img/portfolio/camel.gif" class="img-fluid" alt="Tracker project screenshot">
                 </div>
 
                 <div class="project-overlay">
-                  <h4>Trackers Visualizer</h4>
+                  <h4>Rigid Object Point Tracking</h4>
 
                   <div class="project-details">
-                    <p>Annotation tool to select points and lines in a video to perform point tracking.</p>
+                    <p>Full-stack annotation tool for evaluating rigid object tracking with attention weight bias mechanism.</p>
                     <ul class="text-start">
-                      <li>Built a full-stack annotation tool</li>
-                      <li>Evaluate rigid object tracking performance</li>
-                      <li>Point and line selection for tracking</li>
+                      <li>5% improvement in rigid object tracking accuracy</li>
+                      <li>30% reduction in manual annotation time</li>
                       <li>Multi-model support (CoTracker3, PIP++)</li>
                     </ul>
                     <p><strong>Tech:</strong> PyTorch, Deep Learning, OpenCV, Computer Vision, Python, JavaScript</p>
-                    <!-- <a href="https://github.com/shadowfax11/tracker-optimizer" target="_blank" class="btn btn-sm btn-outline-light mt-2">View on GitHub</a> -->
+                    <span class="btn btn-sm btn-outline-light mt-2">Learn More</span>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-app">
-              <div class="portfolio-wrap position-relative overflow-hidden">
+              <a href="owldb.html" class="portfolio-wrap position-relative overflow-hidden" style="text-decoration: none; color: inherit; display: block;">
                 <div class="image-crop-container">
                   <img src="assets/img/portfolio/database.png" class="img-fluid" alt="OwlDB project screenshot">
                 </div>
 
                 <div class="project-overlay">
-                  <h4>OwlDB</h4>
+                  <h4>OwlDB - Custom NoSQL Database</h4>
 
                   <div class="project-details">
-                    <p>Custom NoSQL database with high-concurrency support and RESTful API interface.</p>
+                    <p>Hierarchical NoSQL database with RESTful API, SSE subscriptions, and 100 concurrent connections.</p>
                     <ul class="text-start">
-                      <li>Designed extensible backend architecture in Go</li>
-                      <li>Implemented CRUD endpoints with JSON support</li>
-                      <li>Used Go's concurrency features for parallel request handling</li>
-                      <li>Achieved 92% test coverage with robust test cases</li>
+                      <li>Hierarchical API with recursive nested structures</li>
+                      <li>Real-time SSE subscriptions with Go channels</li>
+                      <li>15+ RESTful endpoints with authentication & CORS</li>
+                      <li>92% code coverage with comprehensive testing</li>
                     </ul>
-                    <p><strong>Tech:</strong> Go, REST API</p>
-                    <a href="https://github.com/RICE-COMP318-FALL24/owldb-p1group07" target="_blank" class="btn btn-sm btn-outline-light mt-2">View on GitHub</a>
+                    <p><strong>Tech:</strong> Go, REST API, SSE, NoSQL</p>
+                    <span class="btn btn-sm btn-outline-light mt-2">Learn More</span>
                   </div>
                 </div>
-              </div>
+              </a>
+            </div>
+
+            <div class="col-lg-4 col-md-6 isotope-item filter-app">
+              <a href="ev-tracker.html" class="portfolio-wrap position-relative overflow-hidden" style="text-decoration: none; color: inherit; display: block;">
+                <div class="image-crop-container">
+                  <img src="assets/img/portfolio/ev-charging.png" class="img-fluid" alt="EV Charging Station Tracker">
+                </div>
+
+                <div class="project-overlay">
+                  <h4>EV Charging Station Availability Tracker</h4>
+
+                  <div class="project-details">
+                    <p>Memory-efficient live tracker of EV charging station availability using Count-Min Sketch algorithm.</p>
+                    <ul class="text-start">
+                      <li>88% memory reduction with 1.91% false positive rate</li>
+                      <li>Tracks 841 DC Fast Charging stations across Texas</li>
+                      <li>Real-time route planning with optimal charging stops</li>
+                      <li>Count-Min Sketch for streaming data with provable guarantees</li>
+                    </ul>
+                    <p><strong>Tech:</strong> Python, Algorithms, Data Structures, Google Maps API</p>
+                    <span class="btn btn-sm btn-outline-light mt-2">Learn More</span>
+                  </div>
+                </div>
+              </a>
             </div>
 
 
             <div class="col-lg-4 col-md-6 isotope-item filter-app">
-              <div class="portfolio-wrap position-relative overflow-hidden">
+              <a href="game-editor.html" class="portfolio-wrap position-relative overflow-hidden" style="text-decoration: none; color: inherit; display: block;">
                 <div class="image-crop-container">
                   <img src="assets/img/portfolio/owl-logo.png" class="img-fluid" alt="Game Editor project screenshot">
                 </div>
@@ -338,25 +383,22 @@
                   <h4>Text-Based Game Editor and Engine</h4>
 
                   <div class="project-details">
-                    <p>Designed and built game editor and engine for text-based games for SLB for onboarding processes.</p>
+                    <p>Full-stack platform for SLB onboarding with real-time scalability and cloud infrastructure.</p>
                     <ul class="text-start">
-                      <li>Led the UI/UX team to integrate with backend systems</li>
-                      <li>Managed database team for real-time scalabiility</li>
-                      <li>Simulated 500 users to optimize database performance</li>
-                      <li>Collaborated cross-team for integration and conducted e2e testing</li>
+                      <li>Led UI/UX team coordinating backend integration</li>
+                      <li>Managed CosmosDB & Redis for real-time data storage</li>
+                      <li>Load tested 500 concurrent users to identify bottlenecks</li>
+                      <li>Cross-team collaboration for full e2e testing</li>
                     </ul>
                     <p><strong>Tech:</strong> Azure, CosmosDB, Redis, C#, .NET, Figma</p>
-                    <div> 
-                      <a href="https://frontend-game-editor-dev.azurewebsites.net/introduction" target="_blank" class="btn btn-sm btn-outline-light mt-2">Try out the Editor</a>
-                      <a href="https://frontend-game-engine-dev.azurewebsites.net/introduction" target="_blank" class="btn btn-sm btn-outline-light mt-2">Try out the Engine</a>
-                    </div>
+                    <span class="btn btn-sm btn-outline-light mt-2">Learn More</span>
                   </div>
                 </div>
-              </div>
+              </a>
             </div>
 
             <div class="col-lg-4 col-md-6 isotope-item filter-app">
-              <div class="portfolio-wrap position-relative overflow-hidden">
+              <a href="holly.html" class="portfolio-wrap position-relative overflow-hidden" style="text-decoration: none; color: inherit; display: block;">
                 <div class="image-crop-container">
                   <img src="assets/img/portfolio/code.png" class="img-fluid" alt="HOLLY project">
                 </div>
@@ -365,41 +407,18 @@
                   <h4>H.O.L.L.Y.</h4>
 
                   <div class="project-details">
-                    <p>Built a device that turns any flat workspace into an interactive area using hand tracking.</p>
+                    <p>Productivity device transforming flat surfaces into interactive screens using computer vision.</p>
                     <ul class="text-start">
-                      <li>Implemented lens correction to improve hand tracking</li>
-                      <li>Designed an intuitive user interface with projection mapping using Kivy library</li>
-                      <li>Integrated LLMs, speech recognition, and TTS for a personalized assistant</li>
+                      <li>40% reduction in gesture detection latency</li>
+                      <li>12% improvement in tracking accuracy with lens correction</li>
+                      <li>LLM integration via HuggingFace for voice assistant</li>
                     </ul>
-                    <p><strong>Tech:</strong> Python, OpenCV, Kivy, Computer Vision</p>
-                    <a href="https://github.com/QuanTran255/Holly" target="_blank" class="btn btn-sm btn-outline-light mt-2">View on GitHub</a>
+                    <p><strong>Tech:</strong> Python, OpenCV, Kivy, Computer Vision, HuggingFace</p>
+                    <span class="btn btn-sm btn-outline-light mt-2">Learn More</span>
                   </div>
                   
                 </div>
-              </div>
-            </div>
-
-            <div class="col-lg-4 col-md-6 isotope-item filter-app">
-              <div class="portfolio-wrap position-relative overflow-hidden">
-                <div class="image-crop-container">
-                  <img src="assets/img/portfolio/ob1.png" class="img-fluid" alt="Exo screenshot">
-                </div>
-
-                <div class="project-overlay">
-                  <h4>Wearable Exoskeleton</h4>
-
-                  <div class="project-details">
-                    <p>Led the development and prototype of a wearable exoskeleton suit to augment user's strength</p>
-                    <ul class="text-start">
-                      <li>Explored control strategies to detect user's intent</li>
-                      <li>Process sensor signals to extract muscle patterns</li>
-                      <li>Evaluated low-latency communication protocols (I2C, SPI) for real-time signal processing</li>
-                      <li>Investigated combining EMG and IMU data to improve motion prediction accuracy</li>
-                    </ul>
-                    <p><strong>Tech:</strong> Arduino, C++, Signal Processing, I2C, SPI</p>
-                  </div>
-                </div>
-              </div>
+              </a>
             </div>
 
             <div class="col-lg-4 col-md-6 isotope-item filter-app">

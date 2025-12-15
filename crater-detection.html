@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>NASA Crater Detection Project - Quan Tran</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+</head>
+
+<body class="portfolio-details-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">Quan Tran</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html#hero">Home<br></a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#resume">Resume</a></li>
+          <li><a href="index.html#projects">Projects</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0" style="color: #ff8800; font-size: 2.5rem;">NASA - Crater Detection For Moon Navigation</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li class="current">Crater Detection</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Portfolio Details Section -->
+    <section id="portfolio-details" class="portfolio-details section">
+
+      <div class="container-fluid" data-aos="fade-up">
+
+        <div class="row g-0">
+
+          <div class="col-lg-7" data-aos="fade-up" style="padding: 20px 40px 40px 40px;">
+            <div class="portfolio-description">
+              <h2>Project Overview</h2>
+              <p>
+                Developed an advanced instance segmentation model for lunar crater detection to support NASA's autonomous moon navigation missions. 
+                The project aimed to create a robust, efficient system capable of identifying and mapping craters in real-time, enabling precise 
+                spacecraft navigation on the lunar surface.
+              </p>
+
+              <h3 class="mt-4">Key Achievements</h3>
+              
+              <h4 class="mt-3">Navigation Accuracy</h4>
+              <p>
+                Reduced navigation error to <strong>3.08 km</strong>, representing an 80% improvement over the previous best model's 15 km error rate. 
+                This dramatic improvement in accuracy is critical for safe landing site selection and autonomous rover navigation on the Moon's surface.
+              </p>
+
+              <h4 class="mt-3">Performance Optimization</h4>
+              <p>
+                Achieved a <strong>4-second inference time</strong>, well within the 20-second mission-critical constraint. This 5x safety margin 
+                ensures reliable real-time processing even under suboptimal conditions, crucial for time-sensitive navigation decisions during descent and landing operations.
+              </p>
+
+              <h4 class="mt-3">Memory Efficiency</h4>
+              <p>
+                Optimized the model to use only <strong>1.4 GB peak memory</strong>, a 65% reduction compared to baseline models. This optimization 
+                was essential for deployment on space-constrained hardware systems with limited computational resources, typical of spacecraft electronics.
+              </p>
+
+              <h4 class="mt-3">Detection Accuracy</h4>
+              <p>
+                Achieved a <strong>50% accuracy improvement</strong> over baseline models in crater detection and segmentation. This enhancement 
+                significantly improves the reliability of navigation systems that depend on accurate crater identification for position estimation.
+              </p>
+
+              <h4 class="mt-3">Automated Data Pipeline</h4>
+              <p>
+                Built a sophisticated automated labeling pipeline that processed <strong>100,000+ craters across 3,700 images</strong>, eliminating 
+                approximately 1,000 hours of manual annotation work. This pipeline not only accelerated model training but also ensured consistent, 
+                high-quality labels across the entire dataset.
+              </p>
+
+              <h3 class="mt-4">Technical Implementation</h3>
+              <p>
+                The project leveraged state-of-the-art deep learning techniques using PyTorch, implementing custom architectures optimized for 
+                instance segmentation tasks. Key technical components included:
+              </p>
+              <ul>
+                <li>Custom neural network architecture designed for lunar terrain features</li>
+                <li>Advanced data augmentation techniques to handle varying lighting conditions and surface textures</li>
+                <li>Model compression and quantization techniques to meet memory constraints</li>
+                <li>Optimized inference pipeline for real-time processing capabilities</li>
+                <li>Robust validation framework to ensure reliability across diverse lunar landscapes</li>
+              </ul>
+
+              <h3 class="mt-4">Impact</h3>
+              <p>
+                This crater detection system represents a significant advancement in autonomous lunar navigation technology. The combination of 
+                high accuracy, low latency, and efficient resource utilization makes it suitable for deployment in actual space missions, 
+                contributing to NASA's goals of establishing sustainable lunar presence and supporting future manned missions to the Moon.
+              </p>
+
+            </div>
+          </div>
+
+          <div class="col-lg-5 position-relative" data-aos="fade-up" data-aos-delay="100" style="background-color: #f8f9fa; padding: 20px 40px 40px 20px;">
+            <div style="position: sticky; top: 60px; width: 100%;">
+              <img src="assets/img/portfolio/Sample_trajectory.gif" class="img-fluid rounded" alt="Crater Detection Trajectory" style="width: 100%; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+              
+              <div class="portfolio-info mt-4" style="background: white; padding: 20px; border-radius: 8px;">
+                <h3>Project Information</h3>
+                <ul>
+                  <li><strong>Organization</strong>: NASA</li>
+                  <li><strong>Category</strong>: Computer Vision / Deep Learning</li>
+                  <li><strong>Duration</strong>: August 2025 - Present</li>
+                  <li><strong>Status</strong>: Ongoing</li>
+                </ul>
+              </div>
+
+              <div class="portfolio-info mt-4" style="background: white; padding: 20px; border-radius: 8px;">
+                <h3>Technologies Used</h3>
+                <ul>
+                  <li>PyTorch</li>
+                  <li>Deep Learning</li>
+                  <li>Computer Vision</li>
+                  <li>Instance Segmentation</li>
+                  <li>Python</li>
+                </ul>
+              </div>
+
+              <div class="portfolio-info mt-4" style="background: white; padding: 20px; border-radius: 8px;">
+                <h3>Key Metrics</h3>
+                <ul>
+                  <li><strong>Navigation Error</strong>: 3.08 km</li>
+                  <li><strong>Inference Time</strong>: 4 seconds</li>
+                  <li><strong>Peak Memory</strong>: 1.4 GB</li>
+                  <li><strong>Accuracy Improvement</strong>: 50%</li>
+                  <li><strong>Craters Labeled</strong>: 100,000+</li>
+                  <li><strong>Images Processed</strong>: 3,700</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Details Section -->
+
+  </main>
+
+  <footer id="footer" class="footer accent-background">
+
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">DevFolio</strong> <span>All Rights Reserved</span></p>
+      </div>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://github.com/QuanTran255" target="_blank"><i class="bi bi-github"></i></a>
+        <a href="https://www.linkedin.com/in/quan-tran-20017626b/" target="_blank"><i class="bi bi-linkedin"></i></a>
+      </div>
+      <div class="credits">
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>

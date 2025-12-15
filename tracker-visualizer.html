@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Rigid Object Tracking - Tracker Visualizer - Quan Tran</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Main CSS File -->
+  <link href="assets/css/main.css" rel="stylesheet">
+
+</head>
+
+<body class="portfolio-details-page">
+
+  <header id="header" class="header d-flex align-items-center sticky-top">
+    <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <!-- Uncomment the line below if you also wish to use an image logo -->
+        <!-- <img src="assets/img/logo.png" alt=""> -->
+        <h1 class="sitename">Quan Tran</h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul>
+          <li><a href="index.html#hero">Home<br></a></li>
+          <li><a href="index.html#about">About</a></li>
+          <li><a href="index.html#resume">Resume</a></li>
+          <li><a href="index.html#projects">Projects</a></li>
+          <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
+
+    <!-- Page Title -->
+    <div class="page-title" data-aos="fade">
+      <div class="container d-lg-flex justify-content-between align-items-center">
+        <h1 class="mb-2 mb-lg-0" style="color: #ff8800; font-size: 2.5rem;">Rigid Object Point Tracking</h1>
+        <nav class="breadcrumbs">
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="index.html#projects">Projects</a></li>
+            <li class="current">Tracker Visualizer</li>
+          </ol>
+        </nav>
+      </div>
+    </div><!-- End Page Title -->
+
+    <!-- Portfolio Details Section -->
+    <section id="portfolio-details" class="portfolio-details section">
+
+      <div class="container-fluid" data-aos="fade-up">
+
+        <div class="row g-0">
+
+          <div class="col-lg-7" data-aos="fade-up" style="padding: 20px 40px 40px 40px;">
+            <div class="portfolio-description">
+              <h2>Project Overview</h2>
+              <p>
+                Developed an advanced full-stack annotation tool for evaluating and improving rigid object tracking performance at the 
+                Rice University Computer Vision Lab. The project focused on creating a novel attention weight bias mechanism integrated 
+                with semantic segmentation to enhance point tracking accuracy for rigid objects, alongside building comprehensive tooling 
+                for model evaluation and visualization.
+              </p>
+
+              <h3 class="mt-4">Key Achievements</h3>
+              
+              <h4 class="mt-3">Attention Weight Bias Mechanism</h4>
+              <p>
+                Developed a novel attention weight bias mechanism that leverages semantic segmentation to improve point tracking accuracy 
+                for rigid objects by <strong>5%</strong> over baseline models. This mechanism intelligently guides the tracker's attention 
+                to focus on features belonging to the same rigid object, reducing drift and improving long-term tracking stability across 
+                challenging scenarios including occlusions and appearance changes.
+              </p>
+
+              <h4 class="mt-3">Full-Stack Annotation Tool</h4>
+              <p>
+                Built a comprehensive full-stack annotation tool with a JavaScript front end and Python backend (Flask, OpenCV) that reduced 
+                manual annotation time by <strong>30%</strong>. The tool streamlines the evaluation workflow by providing intuitive interfaces 
+                for point and line selection, automatic track visualization, and seamless integration with state-of-the-art tracking models.
+              </p>
+
+              <h4 class="mt-3">Dynamic Point and Line Selection</h4>
+              <p>
+                Enabled dynamic point and line selection capabilities with real-time track visualization, allowing researchers to interactively 
+                define tracking targets and immediately observe model performance. This feature supports both individual point tracking and 
+                line-based rigid object constraints, providing flexibility in defining tracking scenarios.
+              </p>
+
+              <h4 class="mt-3">Multi-Model Integration</h4>
+              <p>
+                Achieved seamless integration with multiple state-of-the-art tracking models including <strong>CoTracker3 and PIP++</strong>, 
+                enabling comprehensive comparative analysis and benchmarking. The unified interface abstracts model-specific implementation 
+                details while providing consistent evaluation metrics across different architectures.
+              </p>
+
+              <h4 class="mt-3">Backend Architecture</h4>
+              <p>
+                Designed a robust and extensible backend architecture optimized for loading video data, managing tracker configurations, 
+                and supporting multi-model workflows. The architecture includes efficient video frame caching, parallel processing capabilities, 
+                and modular design patterns that facilitate easy addition of new tracking models and evaluation metrics.
+              </p>
+
+              <h3 class="mt-4">Technical Implementation</h3>
+              <p>
+                The project leveraged cutting-edge deep learning frameworks and computer vision techniques:
+              </p>
+              <ul>
+                <li><strong>Attention Mechanism:</strong> Custom attention weight bias layer integrated with semantic segmentation networks to enforce rigid object constraints</li>
+                <li><strong>Frontend:</strong> Interactive JavaScript interface with real-time canvas rendering for track visualization and user input</li>
+                <li><strong>Backend:</strong> Flask-based REST API with OpenCV for video processing and PyTorch for model inference</li>
+                <li><strong>Model Integration:</strong> Abstraction layer supporting multiple tracking architectures with unified evaluation pipeline</li>
+                <li><strong>Data Processing:</strong> Efficient video frame buffering and preprocessing pipeline optimized for real-time feedback</li>
+                <li><strong>Evaluation Metrics:</strong> Comprehensive suite of tracking metrics including accuracy, precision, and temporal consistency</li>
+              </ul>
+
+              <h3 class="mt-4">Research Impact</h3>
+              <p>
+                This work contributes to advancing the field of rigid object tracking by introducing an attention-based mechanism that 
+                improves tracking accuracy while maintaining computational efficiency. The annotation tool has become an essential component 
+                of the lab's research workflow, accelerating the evaluation and development of new tracking algorithms. The improvements in 
+                tracking accuracy and annotation efficiency directly support research in robotics, autonomous systems, and augmented reality 
+                applications where precise rigid object tracking is critical.
+              </p>
+
+              <h3 class="mt-4">Future Directions</h3>
+              <p>
+                Ongoing work includes extending the attention mechanism to handle deformable objects, incorporating temporal consistency 
+                constraints across longer sequences, and exploring self-supervised learning approaches to reduce annotation requirements 
+                further. The tool's architecture is designed to accommodate these extensions while maintaining backward compatibility with 
+                existing tracking models and evaluation workflows.
+              </p>
+
+            </div>
+          </div>
+
+          <div class="col-lg-5 position-relative" data-aos="fade-up" data-aos-delay="100" style="background-color: #f8f9fa; padding: 20px 40px 40px 20px;">
+            <div style="position: sticky; top: 60px; width: 100%;">
+              <img src="assets/img/portfolio/camel.gif" class="img-fluid rounded" alt="Tracker Visualizer Demo" style="width: 100%; box-shadow: 0 4px 8px rgba(0,0,0,0.1);">
+              
+              <div class="portfolio-info mt-4" style="background: white; padding: 20px; border-radius: 8px;">
+                <h3>Project Information</h3>
+                <ul>
+                  <li><strong>Organization</strong>: Rice University Computer Vision Lab</li>
+                  <li><strong>Role</strong>: Research Intern</li>
+                  <li><strong>Duration</strong>: May 2025 - November 2025</li>
+                  <li><strong>Category</strong>: Computer Vision / Deep Learning</li>
+                </ul>
+              </div>
+
+              <div class="portfolio-info mt-4" style="background: white; padding: 20px; border-radius: 8px;">
+                <h3>Technologies Used</h3>
+                <ul>
+                  <li>PyTorch</li>
+                  <li>Deep Learning</li>
+                  <li>OpenCV</li>
+                  <li>Flask</li>
+                  <li>JavaScript</li>
+                  <li>Computer Vision</li>
+                  <li>Python</li>
+                  <li>Semantic Segmentation</li>
+                </ul>
+              </div>
+
+              <div class="portfolio-info mt-4" style="background: white; padding: 20px; border-radius: 8px;">
+                <h3>Key Metrics</h3>
+                <ul>
+                  <li><strong>Tracking Accuracy</strong>: 5% improvement</li>
+                  <li><strong>Annotation Time</strong>: 30% reduction</li>
+                  <li><strong>Models Supported</strong>: CoTracker3, PIP++</li>
+                  <li><strong>Real-time Visualization</strong>: Yes</li>
+                </ul>
+              </div>
+
+              <div class="portfolio-info mt-4" style="background: white; padding: 20px; border-radius: 8px;">
+                <h3>Key Features</h3>
+                <ul>
+                  <li>Attention weight bias mechanism</li>
+                  <li>Dynamic point/line selection</li>
+                  <li>Real-time track visualization</li>
+                  <li>Multi-model integration</li>
+                  <li>Extensible backend architecture</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </section><!-- /Portfolio Details Section -->
+
+  </main>
+
+  <footer id="footer" class="footer accent-background">
+
+    <div class="container">
+      <div class="copyright text-center ">
+        <p>© <span>Copyright</span> <strong class="px-1 sitename">DevFolio</strong> <span>All Rights Reserved</span></p>
+      </div>
+      <div class="social-links d-flex justify-content-center">
+        <a href="https://github.com/QuanTran255" target="_blank"><i class="bi bi-github"></i></a>
+        <a href="https://www.linkedin.com/in/quan-tran-20017626b/" target="_blank"><i class="bi bi-linkedin"></i></a>
+      </div>
+      <div class="credits">
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
+      </div>
+    </div>
+
+  </footer>
+
+  <!-- Scroll Top -->
+  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+  <script src="assets/vendor/typed.js/typed.umd.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/imagesloaded/imagesloaded.pkgd.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
